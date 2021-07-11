@@ -52,7 +52,8 @@
             <% te = params['tel'] %>
             <p>電話番号：<%= te %></p>
             <% cont = params['content'] %>
-            <p> 内容：<%= cont %></p>
+            <% conte =cont.gsub(/\r\n|\r|\n/, "<br>") %>
+            <p> 内容：<%= conte %></p>
         </div>
         <form action="/" method="GET">
             <div class="text-center mb-4">
